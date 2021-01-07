@@ -165,12 +165,7 @@ export default function Pool() {
                 <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/ETH">
                   Create a pair
                 </ResponsiveButtonSecondary>
-                <ResponsiveButtonPrimary
-                  id="join-pool-button"
-                  as={Link}
-                  padding="6px 8px"
-                  to={`/add/ETH/${process.env.REACT_APP_AXION_CONTRACT}`}
-                >
+                <ResponsiveButtonPrimary id="join-pool-button" as={Link} padding="6px 8px" to={`/add/ETH/${process.env.REACT_APP_AXION_CONTRACT}`}>
                   <Text fontWeight={500} fontSize={16}>
                     Add Liquidity
                   </Text>
