@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logoLightMode.svg'
-import LogoDark from '../../assets/svg/logoDarkMode.svg';
+import LogoDark from '../../assets/svg/logoDarkMode.svg'
 
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
