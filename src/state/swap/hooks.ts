@@ -292,7 +292,7 @@ export function useDefaultsFromURLSearch():
         typedValue: parsed.typedValue,
         field: parsed.independentField,
         inputCurrencyId: parsed[Field.INPUT].currencyId,
-        outputCurrencyId: "0x71f85b2e46976bd21302b64329868fd15eb0d127",
+        outputCurrencyId: parsed[Field.OUTPUT].currencyId || "0x71f85b2e46976bd21302b64329868fd15eb0d127",
         recipient: parsed.recipient
       })
     )
