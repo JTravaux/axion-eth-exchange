@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Code, Info, MessageCircle, PieChart } from 'react-feather'
+import { Code, Info, MessageCircle, PieChart, Airplay } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -102,6 +102,10 @@ export default function Menu() {
           <MenuItem id="link" href="https://axion.network/">
             <Info size={14} />
             About
+          </MenuItem>
+          <MenuItem id="link" href="https://stake.axion.network/staking">
+            <Airplay size={14} />
+            Staking
           </MenuItem>
           <MenuItem id="link" href={CODE_LINK}>
             <Code size={14} />
