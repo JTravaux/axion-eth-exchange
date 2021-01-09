@@ -5,6 +5,7 @@ import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
+import { NavLink } from 'react-router-dom'
 
 import { ExternalLink } from '../../theme'
 
@@ -50,7 +51,7 @@ const StyledMenu = styled.div`
 `
 
 const MenuFlyout = styled.span`
-  min-width: 8.125rem;
+  min-width: 12.125rem;
   background-color: ${({ theme }) => theme.bg3};
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
@@ -83,6 +84,22 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
+const StylesNavLink = styled(NavLink)`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text2};
+  :hover {
+    color: ${({ theme }) => theme.text1};
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+`
+
 const CODE_LINK = 'https://github.com/Axion-Network'
 
 export default function Menu() {
@@ -100,12 +117,12 @@ export default function Menu() {
       {open && (
         <MenuFlyout>
           <MenuItem id="link" href="https://axion.network/">
-            <Info size={14} />
-            About
+            <Airplay size={14} />
+            Website
           </MenuItem>
           <MenuItem id="link" href="https://stake.axion.network/staking">
             <Airplay size={14} />
-            Staking
+            Staking Portal
           </MenuItem>
           <MenuItem id="link" href={CODE_LINK}>
             <Code size={14} />
@@ -119,6 +136,10 @@ export default function Menu() {
             <PieChart size={14} />
             Stats
           </MenuItem>
+          <StylesNavLink id="Diaclaimer Menu Item" to={'/disclaimer'}>
+            <Info size={14} />
+            Disclaimer
+          </StylesNavLink>
         </MenuFlyout>
       )}
     </StyledMenu>
